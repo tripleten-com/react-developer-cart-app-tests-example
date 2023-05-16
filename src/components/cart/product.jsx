@@ -7,7 +7,7 @@ import { priceFormat } from '../common/utils';
 export const Product = ({ src, id, text, qty, price, decrease, increase, discount, discountedPrice, onDelete }) => {
   return (
     <div className={`${styles.product}`}>
-      <img className={styles.img} src={src} alt="фото товара." />
+      <img className={styles.img} src={src} alt="product image." />
       <p className={styles.text}>{text}</p>
       <div className={styles.amountbox}>
         <AmountButton data-testid={`decrease-${id}`} onClick={decrease}>-</AmountButton>
