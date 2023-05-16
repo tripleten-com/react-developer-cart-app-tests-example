@@ -34,7 +34,7 @@ export const Recommend = ({ extraClass }) => {
   return (
     <section className={`${styles.container} ${extraClass}`}>
       <Title
-        text="Обычно с этим покупают"
+        text="Customers who bought this item also bought"
         amount={(recommendedItems && recommendedItems.length) || ''}
       />
       <div className={styles.items}>{content}</div>
