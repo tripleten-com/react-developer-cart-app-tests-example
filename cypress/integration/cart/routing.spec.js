@@ -4,17 +4,17 @@ describe('app works correctly with routes', function() {
   });
 
   it('should open cart page by default', function() {
-    cy.contains('Корзина');
+    cy.contains('Shopping cart');
   });
 
   it('should open delivery page after continue button click', function() {
-    cy.get('button').contains('Продолжить оформление').click();
-    cy.contains('Доставка');
+    cy.get('button').contains('Continue to shipping').click();
+    cy.contains('Shipping');
   });
 
   it('should open agreement page after continue button click', function() {
-    cy.contains('Обычная доставка').click();
-    cy.get('button').contains('Продолжить оформление').click();
-    cy.contains('Подтверждение заказа');
+    cy.contains('Standard shipping').click();
+    cy.get('button').contains('Continue to confirm').click();
+    cy.contains('Confirm order');
   });
 });
