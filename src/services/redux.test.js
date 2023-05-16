@@ -47,15 +47,15 @@ const sourceItems = [
       id: 1,
       src: '/static/media/prod-1.945fea17.jpg',
       qty: 2,
-      text: 'похожая на настоящую красный Мягкая приманка в виде червя силиконовый искусственный приманки рыбный запах креветок',
-      price: 120
+      text: 'similar to real red soft worm bait silicone artificial bait fishy shrimp smell',
+      price: 1,55
     },
     {
       id: 2,
       src: '/static/media/prod-2.9a2c7860.jpg',
       qty: 2,
-      text: 'Умное кольцо из нержавеющей стали с датчиком температуры тела, модный дисплей',
-      price: 450
+      text: 'Smart stainless steel ring with body temperature sensor, fashionable display',
+      price: 5,83
     }
   ]
 
@@ -70,27 +70,27 @@ const resStoreWithIncreasedItem = {
         id: 1,
         src: '/static/media/prod-1.945fea17.jpg',
         qty: 3,
-        text: 'похожая на настоящую красный Мягкая приманка в виде червя силиконовый искусственный приманки рыбный запах креветок',
-        price: 120
+        text: 'similar to real red soft worm bait silicone artificial bait fishy shrimp smell',
+        price: 1,55
       },
       {
         id: 2,
         src: '/static/media/prod-2.9a2c7860.jpg',
         qty: 2,
-        text: 'Умное кольцо из нержавеющей стали с датчиком температуры тела, модный дисплей',
-        price: 450
+        text: 'Smart stainless steel ring with body temperature sensor, fashionable display',
+        price: 5,83
       }]}
 }
-describe('Проверка экшенов и редьюсеров', () => {
+describe('Testing actions and reducers', () => {
     const enhancer = applyMiddleware(thunk);
     const store = createStore(rootReducer, enhancer);
-    it('Диспатчим экшен получения товаров и сравниваем с желаемым стейтом', async ()=>{
+    it('Dispatch the action for obtaining items and compare with the desired state', async ()=>{
         const {getState} = store
         expect(getState()).toStrictEqual(initStore)
         store.dispatch(getItemsSuccess(sourceItems))
         expect(getState()).toStrictEqual(resStoreWithItems)
     })
-    it('Добавляем элементы и увеличиваем на 1 единицу количество', ()=>{
+    it('Add elements and increment the quantity by 1', ()=>{
         const {getState} = store
         store.dispatch(getItemsSuccess(sourceItems))
         expect(getState()).toStrictEqual(resStoreWithItems)
