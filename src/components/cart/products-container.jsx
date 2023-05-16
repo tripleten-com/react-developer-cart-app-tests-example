@@ -44,11 +44,11 @@ export const ProductsContainer = () => {
   const promoCodeStatus = useMemo(
     () => {
       return promoFailed ? (
-        <p className={styles.text}>Произошла ошибка! Проверьте корректность введенного промокода</p>
+        <p className={styles.text}>An error occurred! The promo code you entered is invalid. Please try again</p>
       ) : promoRequest ? (
         ''
       ) : !!promoCode && !!promoDiscount ? (
-        <p className={styles.text}>Промокод успешно применён!</p>
+        <p className={styles.text}>Promo code applied successfully!</p>
       ) : (
         ''
       );
@@ -63,7 +63,7 @@ export const ProductsContainer = () => {
         <div className={styles.inputWithBtn}>
           <Input
             type="text"
-            placeholder="Введите промокод"
+            placeholder="Enter promo code"
             extraClass={styles.input}
             inputWithBtn={true}
             inputRef={inputRef}
@@ -74,7 +74,7 @@ export const ProductsContainer = () => {
             inputButton={true}
             onClick={applyPromoCode}
           >
-            {promoRequest ? <Loader size="small" inverse={true} /> : 'Применить'}
+            {promoRequest ? <Loader size="small" inverse={true} /> : 'Apply'}
           </MainButton>
         </div>
         {!!promoCode && !!promoDiscount && (
