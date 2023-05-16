@@ -6,7 +6,7 @@ import { priceFormat } from '../common/utils';
 export const RecommendItem = ({ src, price, text }) => {
   return (
     <article className={styles.article}>
-      <img className={styles.img} src={src} alt="изображение товара." />
+      <img className={styles.img} src={src} alt="product image." />
       <p className={styles.price}>{priceFormat(price)}</p>
       <p className={styles.text}>{text}</p>
       <MainButton type="button" extraClass={styles.button}>
