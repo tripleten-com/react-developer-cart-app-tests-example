@@ -13,10 +13,10 @@ export const Modal = ({ number, extraClass }) => {
   return ReactDOM.createPortal(
     <section className={`${styles.container} ${extraClass}`}>
       <div className={styles.modal}>
-        <h2 className={styles.title}>Спасибо за заказ!</h2>
-        <p className={styles.text}>Номер заказа:</p>
+        <h2 className={styles.title}>Thanks for your order!</h2>
+        <p className={styles.text}>Order number:</p>
         <p className={styles.number}>{number}</p>
-        <p className={styles.text}>Итоговая сумма:</p>
+        <p className={styles.text}>Total:</p>
         <p className={styles.price}>{priceFormat(totalPrice)}</p>
       </div>
       <ModalOverlay />
