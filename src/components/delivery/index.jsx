@@ -49,7 +49,7 @@ export const Delivery = () => {
   );
 
   const getAddressByCoords = async coords => {
-    placemarkRef.current.properties.set('iconCaption', 'Загрузка...');
+    placemarkRef.current.properties.set('iconCaption', 'Loading...');
     const result = await getGeocodeResult(coords);
     if (result) {
       const newAddress = getAddressFromGeocodeResult(result);
