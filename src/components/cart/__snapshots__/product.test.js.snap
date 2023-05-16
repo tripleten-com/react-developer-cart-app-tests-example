@@ -5,7 +5,7 @@ exports[`should render and Match Snapshot 1`] = `
   className="product"
 >
   <img
-    alt="фото товара."
+    alt="product image."
     className="img"
     src=""
   />
