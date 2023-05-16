@@ -21,11 +21,11 @@ export const DeliveryMethodOption = ({ thumb, id, text, duration, price, checked
       />
       <label htmlFor={id}>
         <div className={styles.leftbox}>
-          <img className={styles.img} src={thumb} alt="изображение способа доставки." />
+          <img className={styles.img} src={thumb} alt="shipping option image." />
           <p className={styles.text}>{text}</p>
         </div>
       </label>
-      <p className={styles.duration}>{duration} дней</p>
+      <p className={styles.duration}>{duration} days</p>
       <p className={styles.price}>{priceFormat(price)}</p>
     </li>
   );
