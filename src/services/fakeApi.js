@@ -19,15 +19,15 @@ export const getItemsRequest = async () => {
             src: pic1,
             qty: 1,
             text:
-              'похожая на настоящую красный Мягкая приманка в виде червя силиконовый искусственный приманки рыбный запах креветок',
-            price: 120
+              'similar to real red soft worm bait silicone artificial bait fishy shrimp smell',
+            price: 1,55
           },
           {
             id: 2,
             src: pic2,
             qty: 1,
-            text: 'Умное кольцо из нержавеющей стали с датчиком температуры тела, модный дисплей',
-            price: 450
+            text: 'Smart stainless steel ring with body temperature sensor, fashionable display',
+            price: 5,83
           }
         ]
       });
@@ -44,15 +44,15 @@ export const getDeliveryMethodsRequest = async () => {
           {
             thumb: delivery1,
             id: 1,
-            text: 'Экспресс доставка',
-            duration: '7-14 дней',
-            price: 4000
+            text: 'Express shipping',
+            duration: '7-14 days',
+            price: 50,57
           },
           {
             thumb: delivery2,
             id: 2,
-            text: 'Обычная доставка',
-            duration: '30-45 дней',
+            text: 'Standard shipping',
+            duration: '30-45 days',
             price: 0
           }
         ]
@@ -69,23 +69,23 @@ export const getRecommendedItemsRequest = async () => {
         data: [
           {
             src: rec1,
-            price: 640,
-            text: 'Деревянная подушка в виде бревна, деревянная текстура пня для украшения'
+            price: 8,29,
+            text: 'Wooden pillow in the form of a log, wooden stump texture for decoration'
           },
           {
             src: rec2,
-            price: 480,
-            text: 'Забавная 3D имитация, закусочный хлеб, мягкая подушка в форме поясницы'
+            price: 6,22,
+            text: 'Funny 3D simulation, snack bread, soft pillow in the shape of lower back'
           },
           {
             src: rec3,
-            price: 960,
-            text: '3D моделирование формы еды плюшевая подушка креативная курица колбаса'
+            price: 12,43,
+            text: '3D modeling of food shape plush pillow creative chicken sausage'
           },
           {
             src: rec4,
-            price: 360,
-            text: 'Забавная Мужская футболка Роберт Паттинсон стоячий мем'
+            price: 4,66,
+            text: 'Funny Men\'s T-shirt Robert Pattinson standing Meme'
           }
         ]
       });
