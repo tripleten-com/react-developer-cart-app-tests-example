@@ -41,7 +41,7 @@ export const DeliveryMethod = () => {
   );
   return (
     <div className={`${styles.container}`}>
-      <h3 className={styles.title}>Выберите способ доставки:</h3>
+      <h3 className={styles.title}>Choose shipping option:</h3>
       {content}
     </div>
   );
