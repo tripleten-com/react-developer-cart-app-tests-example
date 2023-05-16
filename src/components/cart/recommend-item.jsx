@@ -10,7 +10,7 @@ export const RecommendItem = ({ src, price, text }) => {
       <p className={styles.price}>{priceFormat(price)}</p>
       <p className={styles.text}>{text}</p>
       <MainButton type="button" extraClass={styles.button}>
-        Добавить
+        Add
       </MainButton>
     </article>
   );
