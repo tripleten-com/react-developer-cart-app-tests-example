@@ -37,8 +37,8 @@ it('should render and Match Snapshot', () => {
   expect(ProductComponent).toMatchSnapshot();
 });
 
-describe('Проверка на изменение количества товаров', () => {
-  it('Проверка значений количества и суммы товаров', async ()=>{
+describe('Testing whether the quantity of items changed', () => {
+  it('Checking the quantity and the total', async ()=>{
   const {getByTestId} = render(
     <ProductTestComponent />,
   );
@@ -50,23 +50,23 @@ describe('Проверка на изменение количества това
   expect(productAmount).toBeTruthy()
   const productFinalPrice = getByTestId('price-amount-1');
   expect(productFinalPrice).toBeTruthy()
-  // проверяем является ли '+' кнопкой
+  // Test if '+' is a button
   expect(increaseFirst.tagName).toBe('BUTTON')
-  // проверяем базовую сумму
+  // Check the base amount
   expect(productFinalPrice).toHaveTextContent('123')
-  // проверяем базовое количество товаров
+  // Check the base quantity of items
   expect(productAmount).toHaveTextContent('1')
-  // нажимаем на увеличение сумму
+  // Click on increase
   await fireEvent.click(increaseFirst);
-  // проверяем изменилось ли количество товаров
+  // Test if the quantity changed
   expect(productAmount).toHaveTextContent('2')
-  // проверяем изменилась ли сумма
+  // Test if the total changed
   expect(productFinalPrice).toHaveTextContent(2*123)
-  // уменьшаем количество товаров
+  // Decrease the quantity of items
   await fireEvent.click(decreaseFirst);
-  // проверяем изменилось ли количество товаров
+  // Test if the quantity changed
   expect(productAmount).toHaveTextContent('1')
-  // проверяем базовую сумму
+  // Check the base amount
   expect(productFinalPrice).toHaveTextContent('123')
   expect(productFinalPrice).not.toHaveTextContent(2*123)
 })
