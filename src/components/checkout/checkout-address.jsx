@@ -12,19 +12,19 @@ export const CheckoutAddress = ({ extraClass }) => {
   return (
     <ul className={`${styles.container} ${extraClass}`}>
       <li className={styles.textbox}>
-        <h3 className={styles.title}>Информация о доставке:</h3>
+        <h3 className={styles.title}>Shipping information:</h3>
         <p className={styles.text}>{deliveryForm.address}</p>
         <div className={styles.addressInfo}>
           <p className={styles.text}>
-            <span className={styles.span}>Кв/офис: </span>
+            <span className={styles.span}>Apt, suite, etc: </span>
             {deliveryForm.unitNumber}
           </p>
           <p className={styles.text}>
-            <span className={styles.span}>Домофон: </span>
+            <span className={styles.span}>Entry code: </span>
             {deliveryForm.intercom}
           </p>
           <p className={styles.text}>
-            <span className={styles.span}>Этаж: </span>
+            <span className={styles.span}>Floor: </span>
             {deliveryForm.floor}
           </p>
         </div>
@@ -32,7 +32,7 @@ export const CheckoutAddress = ({ extraClass }) => {
         <p className={styles.text}>{deliveryForm.phone}</p>
       </li>
       <li className={styles.textbox}>
-        <h3 className={styles.title}>Выбранный тип доставки:</h3>
+        <h3 className={styles.title}>Shipping option:</h3>
         <p className={styles.text}>{deliveryMethod.text}</p>
         <p className={styles.text}>{deliveryMethod.duration}</p>
       </li>
