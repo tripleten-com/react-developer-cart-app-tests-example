@@ -13,7 +13,7 @@ export const PromoButton = ({ children, extraClass }) => {
   return (
     <button type="button" className={`${styles.button} ${extraClass}`} onClick={cancelPromo}>
       {children}
-      <img className={styles.close} src={closeIcon} alt="кнопка закрытия" />
+      <img className={styles.close} src={closeIcon} alt="close button" />
     </button>
   );
 };
