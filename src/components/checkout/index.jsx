@@ -10,7 +10,7 @@ export const Checkout = ({ extraClass }) => {
   const { order } = useSelector(state => state.checkout);
   return (
     <section className={`${styles.container} ${extraClass}`}>
-      <h3 className={styles.title}>Товары:</h3>
+      <h3 className={styles.title}>Items:</h3>
       {items.map((item, index) => {
         return <CheckoutProduct key={index} {...item} />;
       })}
