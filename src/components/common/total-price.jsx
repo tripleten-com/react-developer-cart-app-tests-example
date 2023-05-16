@@ -28,14 +28,14 @@ export const TotalPrice = () => {
     });
   };
 
-  const submitButtonText = step === 'checkout' ? 'Оформить заказ' : 'Продолжить оформление';
+  const submitButtonText = step === 'checkout' ? 'Checkout' : 'Continue to shipping';
 
   const buttonText = useMemo(
     () => {
       if (step === 'delivery') {
-        return 'Назад к списку покупок';
+        return 'Back to shopping cart';
       } else if (step === 'checkout') {
-        return 'Назад к выбору доставки';
+        return 'Back to shipping';
       } else {
         return '';
       }
@@ -51,7 +51,7 @@ export const TotalPrice = () => {
 
   return (
     <div className={`${styles.container}`}>
-      <p className={styles.text}>Итого:</p>
+      <p className={styles.text}>Total:</p>
       <p className={styles.cost}>{priceFormat(price)}</p>
       <div className={styles.buttonbox}>
         {(step === 'delivery' || step === 'checkout') && (
