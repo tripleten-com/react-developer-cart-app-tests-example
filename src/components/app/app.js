@@ -8,7 +8,7 @@ import { Recommend } from '../cart/recommend';
 import { TotalPrice } from '../common/total-price';
 import { useSelector } from 'react-redux';
 
-const title = { cart: 'Корзина', delivery: 'Доставка', checkout: 'Подтверждение заказа' };
+const title = { cart: 'Shopping cart', delivery: 'Shipping', checkout: 'Confirm order' };
 
 function App() {
   const step = useSelector(state => state.step);
