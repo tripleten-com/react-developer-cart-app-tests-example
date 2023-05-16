@@ -5,8 +5,8 @@ export const Title = ({ text, currentStep, allSteps, amount, extraClass }) => {
   return (
     <header className={`${styles.header} ${extraClass}`}>
       <h2 className={styles.title}>{text}</h2>
-      {currentStep && <p className={styles.steps}>{`Шаг ${currentStep} из ${allSteps}`}</p>}
-      {amount && <p className={styles.steps}>{`${amount} товара`}</p>}
+      {currentStep && <p className={styles.steps}>{`Step ${currentStep} from ${allSteps}`}</p>}
+      {amount && <p className={styles.steps}>{`${amount} item`}</p>}
     </header>
   );
 };
