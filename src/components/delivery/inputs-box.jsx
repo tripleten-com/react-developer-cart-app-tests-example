@@ -18,7 +18,7 @@ export const InputsBox = () => {
         <li className={`${styles.input} ${styles.inputFlex}`}>
           <div className={styles.input}>
             <label className={styles.label} htmlFor="unitNumber">
-              Номер квартиры/офиса
+              Apartment/office number
             </label>
             <Input
               onChange={onChange}
@@ -31,7 +31,7 @@ export const InputsBox = () => {
           </div>
           <div className={styles.input}>
             <label className={styles.label} htmlFor="intercom">
-              Домофон
+              Entry code
             </label>
             <Input
               onChange={onChange}
@@ -45,7 +45,7 @@ export const InputsBox = () => {
         </li>
         <li className={`${styles.input} ${styles.floor}`}>
           <label className={styles.label} htmlFor="floor">
-            Этаж
+            Floor
           </label>
           <Input
             onChange={onChange}
@@ -60,7 +60,7 @@ export const InputsBox = () => {
       <ul className={styles.row}>
         <li className={styles.input}>
           <label className={styles.label} htmlFor="name">
-            ФИО получателя
+            Recipient First and Last Name
           </label>
           <Input
             onChange={onChange}
@@ -69,12 +69,12 @@ export const InputsBox = () => {
             type="text"
             extraClass={styles.input}
             id="name"
-            placeholder="Введите ФИО"
+            placeholder="Enter First and Last Name"
           />
         </li>
         <li className={styles.input}>
           <label className={styles.label} htmlFor="phone">
-            Телефон
+            Phone
           </label>
           <Input
             onChange={onChange}
