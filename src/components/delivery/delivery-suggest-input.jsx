@@ -36,7 +36,7 @@ export const MapSuggestComponent = withYMaps(
       <>
         <Input
           type="text"
-          placeholder="Введите адрес"
+          placeholder="Enter address"
           inputWithBtn={true}
           value={_value}
           extraClass={styles.input}
@@ -46,7 +46,7 @@ export const MapSuggestComponent = withYMaps(
           id="suggest"
         />
         <MainButton type="button" inputButton={true} onClick={onBlur}>
-          Найти
+          Find
         </MainButton>
       </>
     );
